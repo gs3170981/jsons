@@ -1,0 +1,26 @@
+{
+    "name": "jsonx",
+    "displayName": "jsonx",
+    "description": "Annotable JSON file",
+    "publisher": "gs3170981",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "jsonx",
+            "aliases": ["jsonx"],
+            "extensions": [".jsonx"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "jsonx",
+            "scopeName": "source.jsonx",
+            "path": "./syntaxes/jsonx.tmLanguage.json"
+        }]
+    }
+}

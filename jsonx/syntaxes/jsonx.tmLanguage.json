@@ -1,0 +1,28 @@
+{
+	"name": "json",
+	"patterns": [{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.jsonx",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.jsonx",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+				"name": "constant.character.escape.jsonx",
+				"match": "\\\\."
+			}]
+		}
+	},
+	"scopeName": "source.jsonx"
+}
