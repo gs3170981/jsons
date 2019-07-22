@@ -1,26 +1,40 @@
 {
 	"name": "json",
 	"patterns": [{
-			"include": "#keywords"
+			"include": "#boolean"
 		},
 		{
-			"include": "#strings"
+			"include": "#key"
+		},
+		{
+			"include": "#tips"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"boolean": {
 			"patterns": [{
-				"name": "keyword.control.jsonx",
-				"match": "\\b(if|while|for|return)\\b"
+				"name": "keyword",
+				"match": "\\b(true|false)\\b"
 			}]
 		},
-		"strings": {
-			"name": "string.quoted.double.jsonx",
-			"begin": "\"",
-			"end": "\"",
+		"key": {
 			"patterns": [{
-				"name": "constant.character.escape.jsonx",
-				"match": "\\\\."
+				"name": "variable",
+				"match": "\"([\\s\\S]*)\"(\\s+:|:)"
+			}, {
+				"name": "string",
+				"match": "\"([\\s\\S]*)\""
+			}]
+		},
+		"tips": {
+			"patterns": [{
+				"name": "comment.block.html",
+				"begin": "<!--",
+				"end": "-->"
+			}, {
+				"name": "comment.block.html",
+				"begin": "//",
+				"end": "([\\s\\S]*)"
 			}]
 		}
 	},

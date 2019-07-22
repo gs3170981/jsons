@@ -4,13 +4,26 @@
     "description": "Annotable JSON file",
     "publisher": "gs3170981",
     "version": "0.0.1",
+    "keywords": [
+        "jsonx",
+        "json"
+    ],
+    "activationEvents": [
+        "onLanguage:jsonx"
+    ],
+    "homepage": "https://github.com/gs3170981/vscode_jsonx.git",
     "engines": {
-        "vscode": "^1.36.0"
+        "vscode": "^1.28.1"
     },
     "categories": [
         "Programming Languages"
     ],
+    "main": "./extension.js",
     "contributes": {
+        "commands": [{
+            "command": "jsonx.rules",
+            "title": "jsonx rules"
+        }],
         "languages": [{
             "id": "jsonx",
             "aliases": ["jsonx"],
