@@ -3,7 +3,8 @@
     "displayName": "jsonx",
     "description": "Annotable JSON file",
     "publisher": "gs3170981",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "icon": "jsonx.png",
     "keywords": [
         "jsonx",
         "json"
