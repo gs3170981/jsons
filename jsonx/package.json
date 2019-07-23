@@ -20,20 +20,31 @@
     ],
     "main": "./extension.js",
     "contributes": {
-        "commands": [{
-            "command": "jsonx.rules",
-            "title": "jsonx rules"
-        }],
-        "languages": [{
-            "id": "jsonx",
-            "aliases": ["jsonx"],
-            "extensions": [".jsonx"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "jsonx",
-            "scopeName": "source.jsonx",
-            "path": "./syntaxes/jsonx.tmLanguage.json"
-        }]
-    }
+        "commands": [
+            {
+                "command": "jsonx.rules",
+                "title": "jsonx rules"
+            }
+        ],
+        "languages": [
+            {
+                "id": "jsonx",
+                "aliases": [
+                    "jsonx"
+                ],
+                "extensions": [
+                    ".jsonx"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "jsonx",
+                "scopeName": "source.jsonx",
+                "path": "./syntaxes/jsonx.tmLanguage.json"
+            }
+        ]
+    },
+    "dependencies": {}
 }

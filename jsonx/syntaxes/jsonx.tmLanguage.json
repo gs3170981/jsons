@@ -2,6 +2,8 @@
 	"name": "json",
 	"patterns": [{
 			"include": "#boolean"
+		}, {
+			"include": "#number"
 		},
 		{
 			"include": "#key"
@@ -17,21 +19,23 @@
 				"match": "\\b(true|false)\\b"
 			}]
 		},
+		"number": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "[0-9.]"
+			}]
+		},
 		"key": {
 			"patterns": [{
-				"name": "variable",
-				"match": "\"([\\s\\S]*)\"(\\s+:|:)"
+				"name": "variable.numeric",
+				"match": "\"(.+?)\"(\\s+:|:)"
 			}, {
 				"name": "string",
-				"match": "\"([\\s\\S]*)\""
+				"match": "\"(.+?)\""
 			}]
 		},
 		"tips": {
 			"patterns": [{
-				"name": "comment.block.html",
-				"begin": "<!--",
-				"end": "-->"
-			}, {
 				"name": "comment.block.html",
 				"begin": "//",
 				"end": "([\\s\\S]*)"
