@@ -3,7 +3,8 @@
 ## 说在前头
 
 该插件目前只解决注释问题，编译的引擎需配合 npm 包使用
-后期根据需求量再看是否扩展添加
+
+目前预解析引擎个人只开发了**rollup-plugin-jsonx**，请配合 rollup 使用
 
 ---
 
@@ -18,7 +19,8 @@
 1. 引擎
 
 json 文件在静态开发的情况下不可直接引入，jsonx 也相同，您需要 webpack 或 rollup 进行 requre、import 调用
-jsonx 不含有引擎，需要您开发 npm 包进行预解析
+
+jsonx 不含有引擎，除 rollup 之外，需要您开发 npm 包进行预解析
 
 ---
 
